@@ -9,7 +9,7 @@ The complete electrical design of the system, including wiring diagrams, control
 
 ## QUICK START GUIDE:
 1. Install micro-ROS dependencies
-2. Clone this repository into your ROS 2 workspace
+2. Clone this repository into ROS 2 workspace
 3. Build the workspace
 4. Source the workspace
 5. Start the micro-ROS Agent (Teensy 4.1)  ``` ros2 run micro_ros_agent micro_ros_agent serial \
