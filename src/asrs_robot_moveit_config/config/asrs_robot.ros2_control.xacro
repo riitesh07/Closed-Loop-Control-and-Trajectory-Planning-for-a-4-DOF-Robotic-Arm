@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="asrs_robot_ros2_control" params="name">
+
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>teensy_hardware_interface/TeensySystem</plugin>
+
+        <param name="port">/dev/ttyACM0</param>
+        <param name="baudrate">115200</param>
+
+        <!-- Teensy publishes ROS radians already -->
+        <param name="io_is_ros">0</param>
+
+        <!-- Make ros2_control tell Teensy to start streaming -->
+        <param name="send_auto_on_activate">1</param>
+
+        <!-- NEW: strict startup hold to avoid "little run" -->
+        <param name="startup_hold_ms">8000</param>
+        <param name="startup_hold_strict">1</param>
+
+        <!-- Optional: reduce spam -->
+        <param name="log_div">20</param>
+      </hardware>
+
+      <joint name="continuous">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <joint name="revolute1">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <joint name="revolute2">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+      <joint name="revolute3">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+        <state_interface name="velocity"/>
+      </joint>
+
+    </ros2_control>
+
+  </xacro:macro>
+</robot>
+

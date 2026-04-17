@@ -1,0 +1,8 @@
+<library path="teensy_hardware_interface">
+  <class name="teensy_hardware_interface/TeensySystem"
+         type="teensy_hardware_interface::TeensySystem"
+         base_class_type="hardware_interface::SystemInterface">
+    <description>Teensy 4.1 joint-level hardware interface</description>
+  </class>
+</library>
+

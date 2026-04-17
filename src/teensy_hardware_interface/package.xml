@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>teensy_hardware_interface</name>
+  <version>0.1.0</version>
+  <description>Hardware interface plugin for Teensy 4.1 via ros2_control</description>
+  <maintainer email="heinrich@example.com">heinrich</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+  <depend>rclcpp</depend>
+  <depend>rclcpp_lifecycle</depend>
+  <depend>hardware_interface</depend>
+  <depend>pluginlib</depend>
+
+  <test_depend>ament_lint_auto</test_depend>
+  <test_depend>ament_lint_common</test_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+

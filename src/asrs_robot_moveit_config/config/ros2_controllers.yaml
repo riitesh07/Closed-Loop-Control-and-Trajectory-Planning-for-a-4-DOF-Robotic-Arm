@@ -1,0 +1,48 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 50
+    use_sim_time: false
+
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    arm_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+    gripper_controller:
+      type: joint_trajectory_controller/JointTrajectoryController
+
+arm_controller:
+  ros__parameters:
+    publish_rate: 50.0
+    base_frame_id: base_link
+    joints:
+      - continuous
+      - revolute1
+      - revolute2
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    state_publish_rate: 25.0
+    action_monitor_rate: 10.0
+    allow_partial_joints_goal: false
+    allow_nonzero_velocity_at_trajectory_end: false
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.05
+
+gripper_controller:
+  ros__parameters:
+    publish_rate: 50.0
+    base_frame_id: link3
+    joints:
+      - revolute3
+    command_interfaces: [position]
+    state_interfaces: [position, velocity]
+    state_publish_rate: 25.0
+    action_monitor_rate: 10.0
+    allow_partial_joints_goal: false
+    allow_nonzero_velocity_at_trajectory_end: false
+    constraints:
+      goal_time: 2.0
+      stopped_velocity_tolerance: 0.05
+

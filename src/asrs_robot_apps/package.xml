@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>asrs_robot_apps</name>
+  <version>0.0.1</version>
+  <description>ASRS robot helper apps (capture pose, pick/place from named SRDF states).</description>
+
+  <maintainer email="heinrich@todo.todo">heinrich</maintainer>
+  <license>Apache-2.0</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <depend>rclcpp</depend>
+  <depend>std_msgs</depend>
+  <depend>std_srvs</depend>
+  <depend>geometry_msgs</depend>
+  <depend>shape_msgs</depend>
+
+  <depend>tf2</depend>
+  <depend>tf2_geometry_msgs</depend>
+
+  <depend>moveit_ros_planning_interface</depend>
+  <depend>moveit_msgs</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
+
