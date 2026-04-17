@@ -1,0 +1,1 @@
+This repository focuses on controlling a 4 DOF (Degree Of Freedom) self-made robotic arm using the microROS framework of ROS2, visualization performed through RViz and motion planning performed using the MoveIt framework to carry out pick and place tasks in an industry 4.0 benchmark bottle-filling plant.
